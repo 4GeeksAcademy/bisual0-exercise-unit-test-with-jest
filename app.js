@@ -1,0 +1,19 @@
+let oneEuroIs = {
+    JPY: 156.5, // japan yen
+    USD: 1.07,  // us dollar
+    GBP: 0.87   // british pound
+};
+
+const fromEuroToDollar = function (valueInEuro) {
+    return valueInEuro * oneEuroIs.USD;
+};
+
+const fromDollarToYen = function (valueInDollar) {
+    return (valueInDollar / oneEuroIs.USD) * oneEuroIs.JPY;
+};
+
+const fromYenToPound = function (valueInYen) {
+    return (valueInYen / oneEuroIs.JPY) * oneEuroIs.GBP;
+};
+
+module.exports = { fromEuroToDollar, fromDollarToYen, fromYenToPound };
